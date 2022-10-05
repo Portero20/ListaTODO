@@ -3,9 +3,10 @@ import { useState } from 'react'
 
 const Todo = ({prod,onUpdate,onDelete}) => {
 
+//Estado para editar
 const [isEdit,setIsEdit] = useState(false)
 
-
+//Función FormEdit
 const FormEdit = () => {
 
     const [newValue,setNewValue] = useState(prod.title)
@@ -42,6 +43,7 @@ const FormEdit = () => {
 
 }
 
+//Función TodoElement
 const TodoElement = () =>{
 
     return( <div className='todoInfo'>
@@ -64,7 +66,7 @@ return (
     <div className='todo'>
 
         {
-        isEdit ? <FormEdit/> : <TodoElement />
+        isEdit ? <FormEdit/> : <TodoElement /> //si es true me mostrara para actualizar la tarea y si no me mostrara para editarla o eliminarla 
         }
 
     </div>

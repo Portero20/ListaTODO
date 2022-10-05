@@ -10,7 +10,7 @@ const [title,setTitle] = useState("TODO")
 const [todos,setTodos] = useState([]);
 
 
-
+//Función para cada vez que yo escriba algo se me actualice el estado
 const handleChange = (e) =>{
 
     const value = e.target.value
@@ -19,6 +19,8 @@ const handleChange = (e) =>{
 
 }
 
+
+//Función para prevenir el evento y agregar el objeto con sus respectivos datos
 const handleSubmit = (e) =>{
 
     e.preventDefault();
@@ -43,6 +45,7 @@ const handleUpdate = (id,value) =>{ //recibe los parametros del hijo
 
 }
 
+//Función para eliminar una tarea
 const handleDelete = (id) =>{ //pasamos de hijo hacia padre
 
     const temp = todos.filter(item => item.id != id) //le ponemos distinto para que me lo elimine
