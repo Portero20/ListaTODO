@@ -4,7 +4,7 @@ body{
 
     font-family: 'Nunito', sans-serif;
     font-weight: bolder;
-    background-color: rgba(185, 183, 183, 0.733);
+    background-color: rgba(224, 219, 219, 0.932);
 
 }
 
@@ -29,9 +29,8 @@ body{
 .todoInput{
 
     flex-grow: 1;
-    width: 100%;
     padding: 10px;
-    border-radius: 3px;
+    border-radius: 6px;
     border: solid 1px #999;
 
 }
@@ -39,7 +38,7 @@ body{
 .buttonCreate{
 
     border: none;
-    border-radius: 3px;
+    border-radius: 6px;
     background-color: rgb(26,76,169);
     color: white;
     padding: 10px 20px;
