@@ -4,9 +4,11 @@ import { useState } from 'react'
 const Todo = ({prod,onUpdate,onDelete}) => {
 
 const [isEdit,setIsEdit] = useState(false)
-const [newValue,setNewValue] = useState(prod.title)
+
 
 const FormEdit = () => {
+
+    const [newValue,setNewValue] = useState(prod.title)
 
     const handleSubmit = (e) =>{
 
@@ -16,9 +18,19 @@ const FormEdit = () => {
 
     const handleChange = (e) =>{
 
-        const value = e.target.value
-        setNewValue(value)
+        const value = e.target.value;
+        setNewValue(value);
 
+    }
+
+    const handleClickUpdateTodo = () => {
+
+    
+        onUpdate(prod.id,newValue)
+        setIsEdit(false)
+    
+        
+    
     }
 
     return( <form className='todoUpdateForm' onSubmit={handleSubmit}>
@@ -44,15 +56,6 @@ const TodoElement = () =>{
 
 }
 
-const handleClickUpdateTodo = () => {
-
-    
-    onUpdate(prod.id,newValue)
-    setIsEdit(false)
-
-    
-
-}
 
 return (
 
