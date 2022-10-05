@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import Todo from './Todo';
 import "./TodoApp.css"
+import 'animate.css';
 
 
 const todoApp = () => {
@@ -55,7 +56,7 @@ const handleDelete = (id) =>{ //pasamos de hijo hacia padre
 }
 
 return (
-<div className='todoContainer'>
+<div className='todoContainer animate__animated animate__fadeIn'>
 
     <h2>TODO APP</h2>
 
